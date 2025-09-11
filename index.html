@@ -2,8 +2,8 @@
 <html>
 <head><title>EICAR Test Generator</title></head>
 <body>
-  <h2>Click below to download the EICAR test file</h2>
-  <button onclick="downloadEICAR()">Download EICAR</button>
+  <h2>Click below to download a virus.</h2>
+  <button onclick="downloadEICAR()">Download virus</button>
 
   <script>
     function downloadEICAR() {
@@ -12,12 +12,13 @@
       const blob = new Blob([eicar], { type: "application/octet-stream" });
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = "eicar.txt";
+      a.download = "virus.txt";
       a.click();
     }
   </script>
 </body>
 </html>
+
 
 
 
