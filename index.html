@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Cooper Pflaum</title>
-<link href="locksport.css" rel="stylesheet">
-</head>
+<html>
+<head><title>EICAR Test Generator</title></head>
 <body>
-<h1>Register this domain from Porkbun.com</h1>
-</script>
-<header>
-  <h1>Cooper Pflaum</h1>
-</header>
+  <h2>Click below to download the EICAR test file</h2>
+  <button onclick="downloadEICAR()">Download EICAR</button>
 
+  <script>
+    function downloadEICAR() {
+      const b64 = "WDVPISElUEAlUEBbNFxQWlg1NChQXildQ0MpN30kRUlDQVItU1RBTkRBUkQtQU5USVZJUlVTLVRFU1QtRklMRSEkSCtIKg==";
+      const eicar = atob(b64);
+      const blob = new Blob([eicar], { type: "application/octet-stream" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "eicar.com";
+      a.click();
+    }
+  </script>
 </body>
 </html>
 
